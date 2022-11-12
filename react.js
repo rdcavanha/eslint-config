@@ -25,6 +25,7 @@ module.exports = {
     'react/function-component-definition': ['error', { namedComponents: 'arrow-function' }],
     'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
     'react/jsx-props-no-spreading': 'off',
+    'arrow-body-style': ['error', 'as-needed'],
     'import/extensions': [
       'error',
       'ignorePackages',
