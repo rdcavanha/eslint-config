@@ -8,6 +8,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'prefer-destructuring': 'off',
     'require-await': 'error',
+    'no-restricted-exports': 'off',
   },
   ignorePatterns: ['dist/**/*'],
 };

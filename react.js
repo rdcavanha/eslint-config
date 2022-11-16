@@ -5,19 +5,13 @@ module.exports = {
   env: {
     browser: true,
   },
-  extends: ['airbnb', './base/prettier'],
-  parser: '@typescript-eslint/parser',
+  extends: ['airbnb', './base/javascript', './base/prettier'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 'latest',
     sourceType: 'module',
-  },
-  settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx', '.js', '.jsx'],
-    },
   },
   rules: {
     'import/no-default-export': 'error',
@@ -40,6 +34,20 @@ module.exports = {
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
+      extends: ['airbnb-typescript', './base/typescript', './base/prettier'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+      },
+      settings: {
+        'import/parsers': {
+          '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
+        },
+      },
       rules: {
         'react/prop-types': 'off',
       },
