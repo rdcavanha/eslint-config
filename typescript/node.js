@@ -5,4 +5,7 @@ module.exports = {
       typescript: {},
     },
   },
+  rules: {
+    'import/prefer-default-export': 0,
+  },
 };
