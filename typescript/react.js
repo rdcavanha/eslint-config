@@ -1,15 +1,16 @@
 module.exports = {
   extends: ['airbnb', 'airbnb-typescript', '../prettier'],
   rules: {
-    'react/react-in-jsx-scope': 'off',
-    'import/prefer-default-export': 'off',
+    'react/function-component-definition': 0,
+    'react/react-in-jsx-scope': 0,
+    'import/prefer-default-export': 0,
   },
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
       rules: {
-        'react/jsx-props-no-spreading': 'off',
-        'react/require-default-props': 'off',
+        'react/jsx-props-no-spreading': 0,
+        'react/require-default-props': 0,
       },
     },
   ],
