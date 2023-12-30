@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['airbnb', 'airbnb-typescript', '../prettier'],
+  extends: ['airbnb', 'airbnb-typescript', 'airbnb/hooks', '../prettier'],
   rules: {
     'react/function-component-definition': 0,
     'react/react-in-jsx-scope': 0,
