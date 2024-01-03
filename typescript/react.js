@@ -1,5 +1,10 @@
 module.exports = {
   extends: ['airbnb', 'airbnb-typescript', 'airbnb/hooks', '../prettier'],
+  settings: {
+    'import/resolver': {
+      typescript: {},
+    },
+  },
   rules: {
     'react/function-component-definition': 0,
     'react/react-in-jsx-scope': 0,
