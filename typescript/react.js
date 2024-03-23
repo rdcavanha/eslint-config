@@ -18,5 +18,19 @@ module.exports = {
         'react/require-default-props': 0,
       },
     },
+    {
+      files: ['vite.config.ts', 'tailwind.config.js'],
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+    {
+      files: ['src/vite-env.d.ts'],
+      rules: {
+        'no-underscore-dangle': 'off',
+        '@typescript-eslint/naming-convention': 'off',
+      },
+    },
   ],
 };
