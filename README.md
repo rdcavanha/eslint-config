@@ -11,6 +11,6 @@
     ```
 2. Add the dependency to `package.json`, replacing `<token>` with the generated token on GitHub:
     ```json
-    "@rdcavanha/eslint-config": "git+https://github_pat_<token>@github.com/rdcavanha/eslint-config.git"
+    "@rdcavanha/eslint-config": "git+https://github.com/rdcavanha/eslint-config.git"
     ```
 3. Run `pnpm i`
