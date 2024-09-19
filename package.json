@@ -1,25 +1,29 @@
 {
   "name": "@rdcavanha/eslint-config",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "index.cjs",
   "type": "commonjs",
-  "description": "Curated eslint config",
+  "description": "Opinionated and strict Eslint configs for Node and React projects.",
   "keywords": [
     "eslint"
   ],
   "author": "Rodrigo Cavanha",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^8.23.0"
+    "eslint": "^8.57.1"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.13.0",
-    "@typescript-eslint/parser": "^5.0.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-import-resolver-typescript": "^3.6.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.7.1"
+    "@eslint-react/eslint-plugin": "^1.14.1",
+    "@typescript-eslint/eslint-plugin": "^8.6.0",
+    "@typescript-eslint/parser": "^8.6.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.36.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.12",
+    "eslint-plugin-unicorn": "^55.0.0",
+    "prettier": "^3.3.3"
   }
 }
