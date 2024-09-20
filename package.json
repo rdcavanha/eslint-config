@@ -1,6 +1,6 @@
 {
   "name": "@rdcavanha/eslint-config",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "main": "index.cjs",
   "type": "commonjs",
   "description": "Opinionated and strict Eslint configs for Node and React projects.",

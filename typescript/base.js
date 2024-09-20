@@ -29,8 +29,9 @@ module.exports = {
     },
   },
   rules: {
-    '@typescript-eslint/strict-boolean-expressions': 'error',
     '@typescript-eslint/consistent-type-definitions': 'off',
+    '@typescript-eslint/no-unnecessary-type-parameters': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 'error',
     '@typescript-eslint/consistent-type-imports': [
       'error',
       {
@@ -38,9 +39,9 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-import-type-side-effects': 'error',
+    'import/no-named-as-default-member': 'off',
     'import/no-unresolved': 'error',
     'import/no-cycle': 'error',
-    'import/no-named-as-default-member': 'off',
     'import/order': [
       'error',
       {
@@ -51,20 +52,7 @@ module.exports = {
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/no-array-reduce': 'off',
     'unicorn/no-null': 'off',
-    'unicorn/import-style': [
-      'error',
-      {
-        styles: {
-          util: {
-            named: true,
-          },
-          path: {
-            default: true,
-          },
-          chalk: false,
-        },
-      },
-    ],
+    'unicorn/import-style': 'off',
   },
   overrides: [
     {
@@ -72,6 +60,10 @@ module.exports = {
       env: {
         node: true,
       },
+    },
+    {
+      extends: ['plugin:@typescript-eslint/disable-type-checked'],
+      files: ['./**/*.js', '.eslintrc.cjs'],
     },
   ],
 };
