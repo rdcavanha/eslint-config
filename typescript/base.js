@@ -2,7 +2,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/stylistic-type-checked',
+    'plugin:@typescript-eslint/strict-type-checked',
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:unicorn/recommended',
@@ -15,7 +15,6 @@ module.exports = {
   plugins: ['@typescript-eslint', 'import', 'unicorn'],
   root: true,
   parserOptions: {
-    project: './tsconfig.eslint.json',
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
@@ -26,14 +25,19 @@ module.exports = {
     'import/resolver': {
       typescript: {
         alwaysTryTypes: true,
-        project: 'tsconfig.eslint.json',
       },
     },
   },
   rules: {
-    '@typescript-eslint/prefer-nullish-coalescing': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'error',
     '@typescript-eslint/consistent-type-definitions': 'off',
+    '@typescript-eslint/consistent-type-imports': [
+      'error',
+      {
+        fixStyle: 'separate-type-imports',
+      },
+    ],
+    '@typescript-eslint/no-import-type-side-effects': 'error',
     'import/no-unresolved': 'error',
     'import/no-cycle': 'error',
     'import/no-named-as-default-member': 'off',
@@ -46,6 +50,20 @@ module.exports = {
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/no-array-reduce': 'off',
     'unicorn/no-null': 'off',
+    'unicorn/import-style': [
+      'error',
+      {
+        styles: {
+          util: {
+            named: true,
+          },
+          path: {
+            default: true,
+          },
+          chalk: false,
+        },
+      },
+    ],
   },
   overrides: [
     {
