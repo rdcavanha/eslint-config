@@ -47,6 +47,7 @@ module.exports = {
         groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
       },
     ],
+    'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/no-array-reduce': 'off',
     'unicorn/no-null': 'off',
