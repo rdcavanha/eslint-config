@@ -17,6 +17,12 @@ module.exports = {
   },
   overrides: [
     {
+      files: ['.eslintrc.cjs'],
+      env: {
+        node: true,
+      },
+    },
+    {
       files: ['**/*.{ts,tsx}'],
       extends: ['plugin:@eslint-react/recommended-type-checked-legacy'],
       rules,
